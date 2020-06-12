@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.js"></script>
+
+    <style>
+        .blockquote {
+
+            margin: 1rem 0;
+            padding: 1.5rem;
+            border-width: .2rem;
+            border: solid #e4e5e6;
+        }
+
+        .title {
+            color: white;
+            border-radius: 5px;
+            padding: 1em;
+        }
+    </style>
+    <script>
+        var itIsTheTime = function () {
+            location.reload();
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <p>考试时间为：2020 年 4 月 3 日 13:36 至 14:07！</p>
+        <p>
+            <div id="noteAlert" class="alert alert-success" role="alert">
+                <p>注意：已经可以填写答案，提交试卷。</p>
+                <p>页面将于 <span id="time" style=" color: #c10f0f;"></span> 自动提交！ (如果需要提前交卷，请点击下方“提交”。)</p>
+
+                <script>
+                    var itIsTheTime = function () {
+                        $("#subForm").submit();
+                    }
+                </script>
+
+            </div>
+            <form id="subForm" action="/answer/sub" method="post">
+
+                <fieldset>
+                    <div class="title mb-3 bg-primary">
+                        <div>
+                            <h2>中国网2019年应届生招聘笔试试卷（B卷）3</h2>
+                        </div>
+                        <div>
+                            <h2>职位:社交媒体部 社交媒体编辑</h2>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h6><b>欢迎您参加本次考试！答题前请注意如下事项：</b></h6>
+                            <h6><b>试卷满分100分,答题时间为60分钟，答题方式为闭卷，均在答题纸上作答，用黑色的签字笔答题并在每一张答题纸上填写您的姓名及身份证号。</b></h6>
+                        </div>
+                    </div>
+
+
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h5>个人信息</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>姓名<input type="text" name="name" class="form-control" maxlength="10" /></p>
+                            <p>手机<input type="text" name="phone" class="form-control" maxlength="11" /></p>
+                            <p>邮箱<input type="text" name="email" class="form-control" maxlength="100" /></p>
+                            <input type="hidden" name="link" value="mjaz" />
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h5>一、新闻编译（50分）</h5>
+                            <p>请将以下新闻编译成英文新闻稿件。</p>
+                            <p>要求：编译后的稿件由标题、摘要和正文三部分组成。新闻要素明确、重点信息完整、语言表述准确、逻辑清晰。</p>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote">
+                                <p>网传“珠峰景区永久关闭”消息不实</p>
+                                <p>记者近日从西藏自治区有关部门了解到,西藏珠穆朗玛峰国家级自然保护区(以下简称“珠峰保护区”)将继续有条件开放,依法合规的登山活动仍可进行,网传“珠峰景区永久关闭”消息不实。</p>
+                            </blockquote>
+
+                            <p>
+                                <textarea class="form-control" name="t1" rows="5" cols="100"></textarea>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h5>二、社交媒体新闻内容编辑（30分）</h5>
+                            <p>请结合以下报道，在相应的社交媒体平台撰写英文贴文。</p>
+                            <p>facebook贴文要求100字以内，twitter推文要求60字以内。</p>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote">
+                                <p>（1）鲜花巧克力，似乎已不能再满足大家的胃口。在一项最新的调查中，83.42%受访情侣（夫妻）都需要为情人节花钱，其中花费500到1000元的最多，占比超两成。</p>
+                                <p>
+                                    从年龄段来看，新生代95后已成为情人节消费的主力军，仅4.48%没为过节花钱，其超千元的花销也位居前列。而95后当中不少还未走上社会，调查显示有38.1%的学生情侣，其节日花费主要来自父母，还有10.77%的95后依靠花呗、借呗、信用卡等消费贷款“借钱”过“情人劫”。</p>
+                                <p>
+                                    总体而言，越年轻越容易受到浪漫氛围的感召，为过节花的钱也越多。但也有例外，以50后为代表的老年群体，在情人节花费上，呈现出两极分化的现象：在所有年龄段中，不花钱的50后最多，但花费超过3000元乃至万元的也遥遥领先。相反，70后是对过节最不感冒的群体。</p>
+                            </blockquote>
+                            <p>Facebook发布内容：<input type="text" maxlength="100" name="t2_1" class="form-control" /></p>
+                            <p>Twitter发布内容：<input type="text" maxlength="60" name="t2_2" class="form-control" /></p>
+                        </div>
+                    </div>
+
+
+                    <div><p><input type="submit" id="subButton" class="btn btn-primary" value="提交" /></p></div>
+                </fieldset>
+            </form>
+        </p>
+
+    </div>
+
+    <script>
+        /*<![CDATA[*/
+        var limit = "-523383";
+
+
+        /*]]>*/
+    </script>
+    <script>
+        function getTimeInfo(limit) {
+            if (limit > 0) {
+                var dayN = Math.floor(limit / 86400);
+                limit = limit % 86400;
+
+                var hourN = Math.floor(limit / 3600);
+                limit = limit % 3600;
+
+                var minN = Math.floor(limit / 60);
+                limit = limit % 60;
+
+                var info = " ";
+                if (dayN > 0) {
+                    info = dayN + " 天 ";
+                }
+
+                if (hourN > 0) {
+                    info = info + hourN + " 小时 ";
+                } else if (info.length > 1) {
+                    info = info + "0 小时 ";
+                }
+
+                if (minN > 0) {
+                    info = info + minN + " 分 ";
+                } else if (info.length > 1) {
+                    info = info + "0 分 ";
+                }
+
+                info = info + limit + " 秒 ";
+
+                return info;
+            } else {
+                return limit;
+            }
+        }
+
+        !function (window, $) {
+
+            $el_time = $('#time'),
+                countdown = function () {
+
+                    if (limit != null) {
+
+                        if ($el_time.length > 0) {
+                            $el_time.html(getTimeInfo(limit));
+                        }
+
+                        if (0 == limit) {
+                            if (itIsTheTime != null) {
+                                itIsTheTime();
+                            }
+                            return;
+                        }
+                        limit -= 1;
+                        window.setTimeout(countdown, 1000);
+                    }
+                };
+
+            countdown();
+        }(window, window.jQuery);
+    </script>
+</body>
+
+</html>

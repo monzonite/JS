@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <title>中国网-站内搜索</title>
+    <style>
+        .container{
+            min-width: 960px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="fixed-top">
+        <div class="container header-search">
+            <div class="row navbar navbar-default">
+                <div class="col-md-4"><a target="_blank" class="logo-url"><img alt="" class="logo" /></a></div>
+                <div class="col-md-8">
+                    <div class="input-group mt-4">
+                        <input type="text" class="form-control search-input" placeholder="请输入关键词搜索..." aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary search-button" type="button" id="button-addon">搜索</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container result">
+        <div class="mb-3 result-nav">
+            <form action="">
+                <div class="row">
+                    <div class="col-md-12 searchKey">
+                        <div>在<b>标题</b>、<b>正文</b>、<b>关键词</b>中搜索<b class="search-word"></b></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">按日期排序</div>
+                    <div class="col-md-3">共约有<b class="recordcount"></b>项查询结果</div>
+                    <div class="col-md-3">这是第<b class="Ppage"></b>项结果</div>
+                    <div class="col-md-3">搜索用时<b class="totalTime"></b>秒</div>
+                </div>
+                <hr />
+            </form>
+        </div>
+        <ul class="list pagedata">
+        </ul>
+        <div class="container">
+            <nav aria-label="Page navigation" class="page">
+                <ul class="pagination justify-content-center">
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="footer">Copyright © China Internet Information Center. All Rights Reserved</div>
+    </div>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/search.js"></script>
+</body>
+
+</html>
